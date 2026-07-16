@@ -1,4 +1,5 @@
 RELEASEVER="0.7.1"
+RELEASEVERMY="main"
 echo "plainInstaller $RELEASEVER"
 echo "==> Installing plainDE into your system."
 echo "    Please ensure you are allowed to use sudo"
@@ -18,7 +19,8 @@ cd plainDE-tmp-src
 
 # Cloning all repos
 git clone https://github.com/plainDE/plainBase
-git clone https://github.com/plainDE/plainPanel
+git clone https://github.com/SuN4iK/plainPanelUp
+mv plainPanelUp/ plainPanel/
 git clone https://github.com/plainDE/plainAbout
 git clone https://github.com/plainDE/plainControlCenter
 git clone https://github.com/plainDE/plainArtwork
@@ -35,7 +37,7 @@ sudo cp -R plainArtwork/icons /usr/share/plainDE/
 
 # Compiling plainPanel
 cd plainPanel
-git checkout $RELEASEVER
+git checkout $RELEASEVERMY
 qmake
 make
 sudo install -m 0755 plainPanel /usr/bin/plainPanel
