@@ -1,5 +1,6 @@
 RELEASEVERTHMUNIX="0.7.1"
-RELEASEVERSUN4IK="1.0"
+# RELEASEVERSUN4IK="1.0.1"
+RELEASEVERSUN4IK="main"
 echo "plainInstallerUp $RELEASEVERSUN4IK"
 echo "==> Installing plainDE into your system."
 echo "    Please ensure you are allowed to use sudo"
